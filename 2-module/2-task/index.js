@@ -3,5 +3,13 @@
  * @param {Object} obj
  * @returns {Boolean}
  */
-function isEmpty(obj) {
-}
+let isEmpty = function(obj) {
+  for (let property in obj) {
+    if (obj.hasOwnProperty(property)) {
+      return false;
+    } else {
+      continue;
+    }
+  }
+  return true;
+};
